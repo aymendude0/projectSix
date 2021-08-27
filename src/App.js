@@ -5,7 +5,7 @@ import RandomJoke from './RandomJoke';
 import JokeFooter from './JokeFooter';
 import VoteOldJoke from './VoteOldJoke'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route, Link } from 'react-router-dom';
 import './App.css';
 
@@ -22,20 +22,20 @@ render() {
               <nav>
                 <ul>
                   <li>
-                    <Link to="/generateJoke">Random Joke</Link>
+                    <Link to="/generateJoke/">Random Joke</Link>
                   </li>
                   <li>
-                    <Link to="/kristenAymenSaudProject6ix">Add Joke</Link>
+                    <Link to="/addJoke/">Add Joke</Link>
                   </li>
                   <li>
-                    <Link to="/voteForJoke">Vote for a Joke</Link>
+                    <Link to="/voteForJoke/">Vote for a Joke</Link>
                   </li>
                 </ul>
               </nav>
             </header>
-            <Route exact path="/kristenAymenSaudProject6ix" component={JokeEntry} />
-            <Route exact path="/voteForJoke" component={VoteOldJoke} />
-            <Route path="/generateJoke" exact component={RandomJoke} />
+            <Route exact path="/addJoke/" component={JokeEntry} />
+            <Route exact path="/voteForJoke/" component={VoteOldJoke} />
+            <Route path="/generateJoke/" exact component={RandomJoke} />
             <JokeFooter />
           </div>
         </div>
